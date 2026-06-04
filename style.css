@@ -1,0 +1,147 @@
+*{
+     background-image: url("school1.jpeg");
+    background-size: cover;          
+    background-position: center;     
+    background-repeat: no-repeat;    
+    background-attachment: fixed;     
+
+}
+
+
+.bottom-nav {
+    position: fixed; 
+    bottom: 0;       
+    left: 0;
+    width: 100%;     
+    background-color: #0c0c0c;
+    display: flex;   
+    justify-content: space-around; 
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgb(193, 16, 16); 
+    border-top: 1px solid #e41d1d;
+    z-index: 1000;
+    
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: rgb(16, 4, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+
+ .bottom-nav i {
+    font-size: 20px; 
+    margin-bottom: 3px;
+} 
+
+.bottom-nav a:hover {
+    color: #007bff; 
+    text-decoration: underline;
+}
+
+#sdd{
+    font-size: 90px;
+    text-align: center;
+    color:#ff0000;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 9px solid black;
+    background-color: rgb(24, 190, 212);
+    margin: 10px auto;
+    border-radius: 8px;
+    text-shadow: 1px 1px 2px;
+}
+#sdd:hover{
+    text-decoration: underline yellow;
+}
+
+.principle{
+    background-color: rgb(247, 8, 8);
+    height: 110px;
+    width: 110px;
+    padding:80px ;
+    margin: 20px auto; 
+     background-image: url("/principal.jpeg");
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    
+    }
+
+#AAA{
+    font-size: 40px;
+    text-align:center ;
+    text-decoration: solid underline red;
+    height: auto;
+    margin:20PX auto;
+    margin:20PX auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    
+}
+#AAA:hover{
+    color: #ffffff;
+    border: 2px solid black;
+    border-width: 10px;
+    border-radius: 20px;
+    text-decoration:underline ;
+    
+    
+}
+#ppp{
+    font-size:60px ;
+    color: rgb(255, 85, 0);
+}
+#good{
+    color: rgb(9, 9, 9);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+    height: auto;
+    min-height: 100px;
+    line-height: 1.2;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+#Good{
+    color: rgb(9, 9, 9);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10px;
+    height: auto;
+    min-height: 100px;
+    line-height: 1.2;
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+#number{
+    padding-bottom: 60px;
+    color:rgb(3, 15, 241);
+
+}
+#color{
+    color: black;
+    font-size: 36px;
+}
+@media screen and (max-width:600px){
+    #sdd{
+        font-size: 30px;
+        border: 4px solid black;
+        width: 90%;
+        margin: 10px auto;
+        overflow-wrap:break-word ;
+        word-wrap: break-word;
+        display: block;
+        line-height: 1.4;
+    }
+}
