@@ -1,4 +1,7 @@
-  #book{
+body{
+  padding-bottom:90px
+}
+#book{
         text-align: center;
         color: aqua;
   }
@@ -50,7 +53,7 @@
 /* १. प्रत्येक स्टॅंडर्डचा मुख्य डबा (दोन्ही बटन्समधला परफेक्ट गॅप) */
 .dropdown {
     width: 100%;
-    margin-bottom: 1px auto; /* यामुळे खालचे बटन्स नीट खाली सरकतील */
+    margin-bottom: 2px auto; /* यामुळे खालचे बटन्स नीट खाली सरकतील */
     display: block;      
     clear: both;
 }
@@ -59,7 +62,7 @@
 .dropbtn {
     background-color: #1cc88a; /* तुझा मूळ हिरवा रंग */
     color: white;
-    padding: 9px;
+    padding: 10px;
     width: 100%;
     border: none;
     text-align: center;
