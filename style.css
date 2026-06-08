@@ -60,7 +60,7 @@
 
 .principle{
     background-color: transparent;
-    height: 110px;
+    height: 200px;
     width: 110px;
     padding:80px ;
     margin: 20px auto; 
@@ -72,7 +72,9 @@
     max-width: 90%;
     position:relative;
      border:1px solid black;
-
+     background-repeat:no-repeat;
+     
+     
     
     }
 
