@@ -59,12 +59,12 @@
 }
 
 .principle{
-    background-color: rgb(247, 8, 8);
+    background-color: transparent;
     height: 110px;
     width: 110px;
     padding:80px ;
     margin: 20px auto; 
-     background-image: url("/principal.jpeg");
+     background-image: url("sagar.jpeg");
     background-size: cover; 
     display: flex;
     justify-content: center;
