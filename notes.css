@@ -1,143 +1,366 @@
-.bottom-nav {
-    position: fixed; 
-    bottom: 0;       
-    left: 0;
-    width: 100%;     
-    background-color: #0c0c0c;
-    display: flex;   
-    justify-content: space-around; 
-    padding: 10px 0;
-    box-shadow: 0 -2px 10px rgb(193, 16, 16); 
-    border-top: 1px solid #e41d1d ;
-    z-index: 1000;
-    
-}
-
-.bottom-nav a {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 12px;
-}
-
- .bottom-nav i {
-    font-size: 20px; 
-    margin-bottom: 3px;
-} 
-
-.bottom-nav a:hover {
-    color: #007bff; 
-    text-decoration: underline;
-}
-#first{
-    text-align: center;
-    font-size: 40px;
-}
-      body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+/* ----- Global Reset & Base ----- */
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f4f9;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-bottom: 80px;
+            padding: 0 0 80px 0;
+            min-height: 100vh;
         }
 
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
+        /* ----- Header / Title (clean & premium) ----- */
+        .app-header {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px 20px 6px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            margin-bottom: 4px;
+        }
+        .app-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0b2b3f;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .app-header h1 i {
+            color: #2a7de1;
+            font-size: 26px;
+            background: rgba(42, 125, 225, 0.12);
+            padding: 8px;
+            border-radius: 14px;
+        }
+        /* Header actions - only filter icon kept, no 3 lines */
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            color: #3a5f7a;
+        }
+        .header-actions i {
+            font-size: 22px;
+            opacity: 0.7;
+            transition: 0.2s;
+            cursor: pointer;
+            background: white;
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .header-actions i:hover {
+            opacity: 1;
+            color: #1a5bbf;
+            background: #eef4fc;
         }
 
-        /* पूर्ण मेनूचा कंटेनर */
+        /* ----- Categories / Filters (chips) - improved ----- */
+        .filter-section {
+            width: 100%;
+            max-width: 500px;
+            padding: 8px 20px 18px 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+        .filter-section::-webkit-scrollbar {
+            display: none;
+        }
+        .filter-chip {
+            display: inline-block;
+            background: white;
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 550;
+            color: #2d4b66;
+            margin-right: 10px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: 1.5px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .filter-chip i {
+            margin-right: 8px;
+            font-size: 13px;
+        }
+        .filter-chip.active {
+            background: #1a5bbf;
+            color: white;
+            box-shadow: 0 6px 16px rgba(26, 91, 191, 0.25);
+            border-color: #1a5bbf;
+        }
+        .filter-chip:active {
+            transform: scale(0.95);
+        }
+
+        /* ----- Accordion / Notes Container (premium cards) ----- */
         .accordion-container {
             width: 100%;
-            max-width: 400px;
-            background: rgb(9, 175, 216);
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
+            max-width: 500px;
+            padding: 0 16px 20px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
         }
 
-        /* क्लासच्या बटणची स्टाईल */
+        /* Each Class card (like a note group) */
+        .class-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 20, 40, 0.05);
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.2s;
+            border: 1px solid rgba(200, 215, 230, 0.25);
+        }
+        .class-card:hover {
+            box-shadow: 0 10px 32px rgba(0, 20, 40, 0.08);
+        }
+
+        /* Class button (accordion trigger) */
         .class-btn {
-            background-color: #007bff;
-            color: white;
             width: 100%;
-            padding: 16px 20px;
-            font-size: 17px;
-            font-weight: bold;
+            background: white;
             border: none;
-            outline: none;
-            text-align: left;
-            cursor: pointer;
-            transition: background 0.3s;
-            border-bottom: 1px solid #0069d9;
+            padding: 18px 22px;
+            font-size: 17px;
+            font-weight: 650;
+            color: #0b2b3f;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            
+            cursor: pointer;
+            transition: background 0.2s;
+            text-align: left;
+            border-bottom: 1px solid #f0f4f9;
+            letter-spacing: -0.2px;
         }
-
-        /* सराव पेपर बटणला वेगळा रंग (जांभळा/टोकदार) जेणेकरून ते उठून दिसेल */
+        .class-btn i {
+            color: #2a7de1;
+            font-size: 18px;
+            margin-right: 14px;
+        }
+        .class-btn .arrow {
+            font-size: 16px;
+            color: #7e98b0;
+            transition: transform 0.35s ease;
+        }
+        .class-btn.active-btn .arrow {
+            transform: rotate(180deg);
+        }
+        .class-btn .badge {
+            background: #eef3f8;
+            border-radius: 40px;
+            padding: 3px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #2d4b66;
+            margin-left: auto;
+            margin-right: 12px;
+        }
+        /* paper btn special (green accent) */
         .paper-btn {
-            background-color: #28a745; /* हिरवा रंग पेपर्ससाठी */
-            border-bottom: 1px solid #1e7e34;
+            background: #f6fbf8;
+            border-bottom: 1px solid #dcefe3;
+        }
+        .paper-btn i {
+            color: #1e9b5e;
+        }
+        .paper-btn .badge {
+            background: #ddf0e4;
+            color: #0f6e3e;
         }
 
-        /* माऊस नेल्यावर किंवा ऍक्टिव्ह असताना रंग बदलणे */
-        .class-btn:hover, .active-btn {
-            background-color: #0056b3;
-        }
-        
-        .paper-btn:hover, .paper-btn.active-btn {
-            background-color: #1e7e34;
-        }
-
-        /* प्लस/मायनस चिन्हासाठी */
-        .class-btn::after {
-            content: '\002B'; /* प्लस चिन्ह */
-            font-size: 20px;
-        }
-        .active-btn::after {
-            content: "\2212"; /* मायनस चिन्ह */
-        }
-
-        /* सब्जेक्ट लिस्टचा बॉक्स (सुरुवातीला बंद असेल) */
+        /* Subject panel (notes list) */
         .subject-panel {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background-color: #dbdb7a;
+            transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: #fafdff;
+        }
+        .subject-panel.open {
+            max-height: 1200px;
         }
 
-        /* प्रत्येक सब्जेक्टच्या लिंकची स्टाईल */
-        .subject-panel a {
-            display: block;
-            padding: 14px 25px;
-            color: #444;
+        /* individual note link (premium card style) */
+        .note-link {
+            display: flex;
+            align-items: center;
+            padding: 14px 22px;
             text-decoration: none;
-            font-size: 16px;
-            border-bottom: 1px solid #44ef0a;
-            transition: all 0.2s;
+            color: #1a2b3c;
+            border-bottom: 1px solid #edf2f7;
+            transition: background 0.15s, padding-left 0.2s;
+            gap: 14px;
+            cursor: pointer;
         }
-
-        /* शेवटच्या लिंकचा बॉर्डर काढणे */
-        .subject-panel a:last-child {
+        .note-link:last-child {
             border-bottom: none;
         }
-
-        /* सब्जेक्टवर माऊस नेल्यावरचाि इफेक्ट */
-        .subject-panel a:hover {
-            background-color: #e9ecef;
-            color: #1e0487;
-            padding-left: 32px;
+        .note-link:hover {
+            background: #f0f7ff;
+            padding-left: 28px;
         }
-        
-        /* पेपर पॅनलमधील लिंकवर माऊस नेल्यावर हिरवा इफेक्ट */
-        .paper-panel a:hover {
-            color: #0fcc3b;
+        .note-link:active {
+            background: #e3edfb;
+            transform: scale(0.99);
+        }
+        .note-icon {
+            width: 44px;
+            height: 44px;
+            background: #e9f0fa;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a5bbf;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: 0.2s;
+        }
+        .note-link:hover .note-icon {
+            background: #dce8f5;
+        }
+        .note-content {
+            flex: 1;
+            min-width: 0;
+        }
+        .note-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #0b2b3f;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            letter-spacing: -0.2px;
+        }
+        .note-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 4px;
+            flex-wrap: wrap;
+        }
+        .note-subject {
+            font-size: 12px;
+            font-weight: 500;
+            background: #e7edf5;
+            padding: 2px 14px;
+            border-radius: 40px;
+            color: #2d4b66;
+        }
+        .note-chapter {
+            font-size: 12px;
+            color: #5f7d99;
+            font-weight: 450;
+        }
+        .note-link .read-btn {
+            background: #1a5bbf;
+            color: white;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: 0.2s;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(26, 91, 191, 0.18);
+            pointer-events: none;
+        }
+        .note-link .read-btn i {
+            margin-right: 4px;
+            font-size: 12px;
+        }
+
+        /* ----- Bottom Navigation (existing) ----- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #0c0c0c;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0 8px 0;
+            border-top: 1px solid #e41d1d;
+            z-index: 1000;
+            box-shadow: 0 -2px 12px rgba(193, 16, 16, 0.2);
+        }
+        .bottom-nav a {
+            text-decoration: none;
+            color: #aaaaaa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 11px;
+            transition: color 0.2s;
+            gap: 2px;
+        }
+        .bottom-nav i {
+            font-size: 20px;
+            margin-bottom: 1px;
+        }
+        .bottom-nav a:hover {
+            color: #ffffff;
+        }
+        .bottom-nav a.active-nav {
+            color: #2a7de1;
+        }
+
+        /* responsiveness */
+        @media (max-width: 480px) {
+            .app-header h1 {
+                font-size: 20px;
+            }
+            .class-btn {
+                font-size: 16px;
+                padding: 16px 18px;
+            }
+            .note-title {
+                font-size: 14px;
+            }
+            .note-link {
+                padding: 12px 16px;
+            }
+            .filter-chip {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+            .note-icon {
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
+            }
+        }
+        @media (min-width: 768px) {
+            body { padding: 20px 0 80px 0; }
+            .accordion-container { max-width: 560px; }
+        }
+
+        /* smooth entrance animation */
+        .class-card {
+            opacity: 0;
+            animation: fadeSlide 0.5s ease forwards;
+        }
+        .class-card:nth-child(1) { animation-delay: 0.02s; }
+        .class-card:nth-child(2) { animation-delay: 0.06s; }
+        .class-card:nth-child(3) { animation-delay: 0.10s; }
+        .class-card:nth-child(4) { animation-delay: 0.14s; }
+        .class-card:nth-child(5) { animation-delay: 0.18s; }
+        .class-card:nth-child(6) { animation-delay: 0.22s; }
+
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
