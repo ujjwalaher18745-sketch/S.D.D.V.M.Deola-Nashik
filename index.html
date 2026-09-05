@@ -6,93 +6,309 @@
     <meta name="google-site-verification" content="-TW-DYukm6Z8MmkuY_OUnWZFN21Kckt5f7iWaKKR1cc" />
     <meta name="description" content="S.D.D.V.M.Deola,Nashik">
     <meta name="keywords" content="S.D,D.V.M.Deola,Nashik">
-    <title>S.D.D.V.M.Deola,Nashik</title>
+    <title>S.D.D.V.M.Deola, Nashik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="shicon.jpg">
     <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="download.jpg">
+</head>
 <body>
+
+  <!-- एआय चॅट फ्लॉटिंग बटण -->
+  <div class="ai-chat-float" onclick="openPage('chat-page')">
+      <i class="fa-solid fa-robot"></i>
+  </div>
+
   <div class="container">
-        
-        <!-- शाळेचा हेडर (सर्कुलर लोगो + नाव) -->
         <header class="school-header">
             <div class="logo-circle">
                 <img src="sh.jpg" alt="School Logo" onerror="this.style.display='none'">
             </div>
-            <h1 id="sdd">Sharadadevi Danyan Vikas Mandir, DEOLA</h1>
+            <div>
+                <h1 id="sdd">SHARADADEVI DANYAN <span>Vikas Mandir, DEOLA</span></h1>
+            </div>
         </header>
 
-        <!-- प्रिन्सिपल सेक्शन (सर्कुलर फोटो + नाव) -->
-        <section class="principal-section">
-            <div class="principal-avatar">
-                <img src="sagar.jpeg" alt="Principal Image">
+        <div class="notice-board">
+            <i class="fa-solid fa-bullhorn"></i>
+            <marquee id="notice-text">प्रिन्सिपल सर: नवीन शैक्षणिक सत्र सुरू झाले आहे. सर्व विद्यार्थी आणि पालकांचे स्वागत!</marquee>
+        </div>
+
+        <!-- PHOTO SLIDER (below notice) -->
+        <div class="slider-section">
+            <div class="slider-container" id="schoolSlider">
+                <img class="slider-slide active" src="school1.jpeg" alt="School 1">
+                <img class="slider-slide" src="school2.jpg" alt="School 2">
+                <img class="slider-slide" src="school3.jpg" alt="School 3">
+                <img class="slider-slide" src="school4.jpg" alt="School 4">
+                <img class="slider-slide" src="school5.jpg" alt="School 5">
+                <img class="slider-slide" src="school6.jpg" alt="School 6">
+                <img class="slider-slide" src="school7.jpg" alt="School 7">
+                <img class="slider-slide" src="school8.jpg" alt="School 8">
+                <img class="slider-slide" src="school9.jpg" alt="School 9">
+                <img class="slider-slide" src="school10.jpg" alt="School 10">
+                <!-- अधिक फोटोसाठी पुढे आणखी 10 जोडले जाऊ शकतात -->
+                <img class="slider-slide" src="school11.jpg" alt="School 11">
+                <img class="slider-slide" src="school12.jpg" alt="School 12">
+                <img class="slider-slide" src="school13.jpg" alt="School 13">
+                <img class="slider-slide" src="school14.jpg" alt="School 14">
+                <img class="slider-slide" src="school15.jpg" alt="School 15">
+                <img class="slider-slide" src="school16.jpg" alt="School 16">
+                <img class="slider-slide" src="school17.jpg" alt="School 17">
+                <img class="slider-slide" src="school18.jpg" alt="School 18">
+                <img class="slider-slide" src="school19.jpg" alt="School 19">
+                <img class="slider-slide" src="school20.jpg" alt="School 20">
             </div>
-            <div class="principal-info">
-                <h1 id="AAA"><span id="ppp">-principal:--</span> (SAGAR SIR)</h1>
+        </div>
+
+        <div class="hero-banner">
+            <h2>Welcome to Smart Portal</h2>
+            <p>Empowering minds, shaping future leaders with excellence.</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-card">
+                <h3>450+</h3>
+                <p>Students</p>
             </div>
-        </section>
-
-        <!-- सुविचार / Quotes सेक्शन -->
-        <section class="quotes-section">
-            <h1 id="good">• "Education is the passport to the future, for tomorrow belongs to those who prepare for it today."</h1>
-            <h1 id="Good">• "Success doesn't just find you. You have to go out and get it."</h1>
-        </section>
-
-        <!-- कॉन्टॅक्ट नंबर सेक्शन -->
-        <section class="contact-section">
-            <h1 id="number"> CONTACT..NO:-- <span id="color">9604839767</span></h1>
-        </section>
-
-        <!-- रिस्पॉन्सिव्ह प्रोग्राम्स गॅलरी सेक्शन -->
-        <section class="gallery-section">
-            <h2 class="section-title">School Programs & Events</h2>
-            <div class="gallery-grid">
-                <!-- इथे तुम्ही तुमच्या कार्यक्रमांचे फोटो आणि नावे बदलू शकता -->
-                <div class="gallery-item">
-                    <img src="program1.jpg" alt="Program 1">
-                    <div class="overlay">Annual Gathering</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="program2.jpg" alt="Program 2">
-                    <div class="overlay">Sports Day</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="program3.jpg" alt="Program 3">
-                    <div class="overlay">Science Exhibition</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="program4.jpg" alt="Program 4">
-                    <div class="overlay">Independence Day</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="program5.jpg" alt="Program 5">
-                    <div class="overlay">Cultural Event</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="program6.jpg" alt="Program 6">
-                    <div class="overlay">Digital Classroom</div>
-                </div>
+            <div class="stat-card">
+                <h3>15+</h3>
+                <p>Expert Staff</p>
             </div>
-        </section>
+            <div class="stat-card">
+                <h3>03</h3>
+                <p>School Buses</p>
+            </div>
+        </div>
 
+        <div class="sketch-grid">
+            <div class="sketch-btn" onclick="openPage('teacher-page')">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Staff</span>
+            </div>
+            <div class="sketch-btn" onclick="openPage('principal-page')">
+                <i class="fa-solid fa-user-tie"></i>
+                <span>Principal</span>
+            </div>
+            <div class="sketch-btn" onclick="openPage('photos-page')">
+                <i class="fa-solid fa-images"></i>
+                <span>Gallery</span>
+            </div>
+            <div class="sketch-btn" onclick="openPage('busphoto-page')">
+                <i class="fa-solid fa-bus"></i>
+                <span>Bus info</span>
+            </div>
+            <div class="sketch-btn" onclick="openPage('driver-page')">
+                <i class="fa-solid fa-id-card"></i>
+                <span>Drivers</span>
+            </div>
+            <div class="sketch-btn" onclick="openPage('student-page')">
+                <i class="fa-solid fa-user-graduate"></i>
+                <span>Students</span>
+            </div>
+            <!-- My Profile button completely removed as requested -->
+            <div class="sketch-btn full-width-btn" onclick="openPage('time-page')">
+                <i class="fa-solid fa-clock"></i>
+                <span>School Timings, Office Hours & Contact Details</span>
+            </div>
+        </div>
     </div>
-<div class="bottom-nav">
-    <a href="index.html">
-        <i class="fa-solid fa-house"></i>
-        <span>HOME</span>
-    </a>
-    <a href="book.html">
-        <i class="fa-solid fa-book"></i>
-        <span>BOOKS</span>
-    </a>
-    <a href="notes.html">
-        <i class="fa-solid fa-file-lines"></i>
-        <span>NOTES</span>
-    </a>
-    <a href="mcq.html">
-        <i class="fa-solid fa-file-lines"></i>
-        <span>MCQ</span>
-    </a>
 
-</div>
+    <!-- SUB PAGES -->
+    <div id="teacher-page" class="sub-page">
+        <button class="back-btn" onclick="closePage('teacher-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <h2 class="page-title">Teacher Staff Information</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <img src="sagar.jpeg" alt="Teacher">
+                <div>
+                    <h4>Sagar Sir</h4>
+                    <p><b>Subject:</b> Mathematics & Principal</p>
+                    <p><b>Experience:</b> 10+ Years</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="principal-page" class="sub-page">
+        <button class="back-btn" onclick="closePage('principal-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <h2 class="page-title">Principal's Desk</h2>
+        <div class="info-grid">
+            <div class="info-card" style="flex-direction: column; text-align: center;">
+                <img src="sagar.jpeg" alt="Principal" style="width: 80px; height: 80px; margin: 0 auto 8px auto;">
+                <h4>SAGAR SIR (Principal)</h4>
+                <p>Sharadadevi Danyan Vikas Mandir, Deola. Committed to excellence.</p>
+                <p style="margin-top: 8px;"><b>Contact:</b> 9604839767</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="photos-page" class="sub-page">
+        <button class="back-btn" onclick="closePage('photos-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <h2 class="page-title">School Events & Photos</h2>
+        <div class="gallery-grid" id="allPhotosGrid">
+            <div class="gallery-item"><img src="program1.jpg" onerror="this.src='school1.jpeg'"></div>
+            <div class="gallery-item"><img src="program2.jpg" onerror="this.src='school1.jpeg'"></div>
+        </div>
+    </div>
+
+    <div id="busphoto-page" class="sub-page">
+        <button class="back-btn" onclick="closePage('busphoto-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <h2 class="page-title">School Bus Fleet Photos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="school1.jpeg"></div>
+        </div>
+    </div>
+
+    <div id="driver-page" class="sub-page">
+        <button class="back-btn" onclick="closePage('driver-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <h2 class="page-title">Driver Information</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <div>
+                    <h4>1. Ramesh Patil (Bus 01)</h4>
+                    <p><b>Phone:</b> 9822000001</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="student-page" class="sub-page">
+        <button class="back-btn" onclick="closePage('student-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <h2 class="page-title">Student Sections</h2>
+        <div class="info-grid">
+            <div class="info-card"><div><h4>Primary Section (1st to 4th)</h4></div></div>
+            <div class="info-card"><div><h4>Secondary Section (5th to 10th)</h4></div></div>
+        </div>
+    </div>
+
+    <!-- My Profile page (profile-page) completely removed -->
+
+    <div id="time-page" class="sub-page">
+        <button class="back-btn" onclick="closePage('time-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <h2 class="page-title">School Timings & Details</h2>
+        <div class="info-grid">
+            <div class="info-card" style="flex-direction: column; align-items: flex-start;">
+                <h4>🏫 School Timings</h4>
+                <p><b>Morning Shift:</b> 07:30 AM to 12:30 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- एआय चॅट पेज (AI Chat Page) -->
+    <div id="chat-page" class="sub-page">
+        <button class="back-btn" onclick="closePage('chat-page')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <h2 class="page-title">AI Study Assistant</h2>
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-bubble">नमस्ते! मी तुमचा AI स्टडी असिस्टंट आहे. अभ्यास किंवा प्रश्नांबद्दल काहीही विचारू शकता.</div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="तुमचा प्रश्न इथे विचार ...">
+                <button onclick="sendAIەMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- बॉटम नेव्हिगेशन -->
+    <div class="bottom-nav">
+        <a onclick="closeAllPages()" class="active">
+            <i class="fa-solid fa-house"></i>
+            <span>HOME</span>
+        </a>
+        <a href="book.html">
+            <i class="fa-solid fa-book"></i>
+            <span>BOOKS</span>
+        </a>
+        <a href="notes.html">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>NOTES</span>
+        </a>
+        <a href="mcq.html">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>MCQ</span>
+        </a>
+    </div>
+
+    <!-- Firebase (unused but kept) -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAtnRxKmaPh7mZ8R-rm6KbTAxyga9n9nx8",
+        authDomain: "sddvmd.firebaseapp.com",
+        projectId: "sddvmd",
+        storageBucket: "sddvmd.firebasestorage.app",
+        messagingSenderId: "1045623734120",
+        appId: "1:1045623734120:web:8d54f6a6c39285167820dd",
+        measurementId: "G-FNXT533ETE"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
+    <script>
+        // ------------- PHOTO SLIDER (AUTOMATIC LOOP) -------------
+        (function() {
+            const slides = document.querySelectorAll('.slider-slide');
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            if (totalSlides > 0) {
+                // show first slide
+                slides.forEach((s, i) => s.classList.toggle('active', i === 0));
+
+                setInterval(() => {
+                    slides[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    slides[currentIndex].classList.add('active');
+                }, 2500); // change every 2.5 seconds
+            }
+        })();
+
+        // ------------- PAGE NAVIGATION -------------
+        function openPage(pageId) {
+            document.querySelectorAll('.sub-page').forEach(p => p.classList.remove('active-page'));
+            document.getElementById(pageId).classList.add('active-page');
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        function closePage(pageId) {
+            document.getElementById(pageId).classList.remove('active-page');
+        }
+
+        function closeAllPages() {
+            document.querySelectorAll('.sub-page').forEach(p => p.classList.remove('active-page'));
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // ------------- AI CHAT SIMULATION -------------
+        function sendAIەMessage() {
+            let input = document.getElementById('chatInput');
+            let text = input.value.trim();
+            if(text !== "") {
+                let msgContainer = document.getElementById('chatMessages');
+                
+                let userBubble = document.createElement('div');
+                userBubble.className = 'chat-bubble user';
+                userBubble.innerText = text;
+                msgContainer.appendChild(userBubble);
+                
+                input.value = "";
+                msgContainer.scrollTop = msgContainer.scrollHeight;
+
+                setTimeout(() => {
+                    let replyBubble = document.createElement('div');
+                    replyBubble.className = 'chat-bubble';
+                    replyBubble.innerText = "AI उत्तर: या प्रश्नाचे उत्तर पुस्तकात दिले आहे. नीट अभ्यास करा!";
+                    msgContainer.appendChild(replyBubble);
+                    msgContainer.scrollTop = msgContainer.scrollHeight;
+                }, 800);
+            }
+        }
+
+        // (no login/profile related functions remain)
+    </script>
 </body>
 </html>
